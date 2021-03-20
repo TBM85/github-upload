@@ -1,0 +1,189 @@
+@import 'variables';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* Extra large, medium devices and up to large devices */
+@media (min-width: 768px) {
+  .contact-form {
+    margin-top: -4em;
+    box-shadow: 5px 6px 6px 1px $colorshadow;
+    min-width: 20em;
+  }
+  .content-info {
+    justify-content: flex-start;
+    display: grid;
+    position: relative;
+    top: 30%;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+  .container {
+    width: 960px;
+  }
+  .get-offer-btn {
+    border-radius: 0.6em;
+  }
+}
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+  .contact-form {
+    margin-top: 0;
+    border-top: 0.5em solid $colorgreen;
+  }
+  .container {
+    width: 100%;
+  }
+  .col-md-5 {
+    padding: 0;
+  }
+  .get-offer-btn {
+    border-radius: 1.6em;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #eaeaea;
+}
+.background {
+  background-color: $colorgreen;
+  height: fit-content;
+  color: $colorwhite;
+}
+
+/**************** HEADER **************/
+header {
+  background-color: $colorwhite;
+}
+
+/**************** CONTENT BODY **************/
+h1 {
+  font-size: 20pt;
+  padding: 0.6em 0;
+  margin: 0;
+}
+
+/**************** Content Info (left side) **************/
+.content-info {
+  text-align: center;
+  padding: 2em 0;
+  p.text-uppercase {
+    font-size: 1.1em;
+    margin: {
+      top: -1.5em;
+      bottom: 1.5em;
+    }
+  }
+}
+.price {
+  color: $colorgreen;
+  display: flex;
+  justify-content: center;
+  .price-number {
+    font: {
+      size: 85pt;
+      weight: bold;
+    } 
+    margin-bottom: 0;
+  }
+  .price-sign {
+    display: flex;
+    flex-flow: column;
+    margin-top: 0.6em;
+    font: {
+      size: 2.2em;
+      weight: bold;
+    }
+    padding-left: 0.1em;
+    align-items: end;
+    .sign {
+      font-size: 1.5em;
+      margin: {
+        bottom: -0.35em;
+        top: 0.1em;
+      }
+    }
+  }
+}
+
+/**************** Form **************/
+.contact-form {
+  background-color: $colorwhite;
+  padding: 1em;
+  p {
+    @include fontColor(#686867, 18pt);
+  }
+  label {
+    @include fontColor(#a09d9d, 11pt);
+    a {
+      color: #a09d9d !important;
+    }
+  }
+  input.form-control {
+    margin: 0.5em 0;
+    background-color: #e0e6ea;
+  }
+}
+/**************** Modal **************/
+.modal-header {
+  background-color: $colorgreen;
+}
+.modal-body p {
+  padding: 1rem;
+  font: {
+    size: 32pt;
+    weight: bold;
+  }
+  margin: 1em 0;
+}
+/**************** Buttons **************/
+.online-offer-btn {
+  @include btnsColors($colorgreen);
+  box-shadow: 2px 2px 5px 1px $colorshadow;
+  max-width: 17em;
+  padding: {
+    right: 3em;
+    left: 3em;
+  }
+}
+.get-offer-btn {
+  @include btnsColors($colororange);
+  box-shadow: 3px 4px 2px 0px $colorshadow;
+  font-size: calc((100% + 5vh)/2.5);
+  padding: 0.5em 1em;
+}
+.call-me-btn {
+  @include btnsColors($colororange);
+  border-radius: 0.8em;
+  display: flex;
+  margin: auto;
+  margin-top: 2em;
+  span {
+    padding: 0 0.5em;
+    font-size: 16pt;
+  }
+  .arrow-icon {
+    padding-top: 0.6em;
+  }
+}
+.close {
+  @include fontColor($colorwhite, 1.2em);
+  text-shadow: none;
+  opacity: 1;
+}
+
+/**************** FOOTER **************/
+footer {
+  width: 100%;
+  p {
+    padding: 0.6em 0;
+    margin: 0;
+  }
+  img {
+    width: 1em;
+    margin-bottom: 0.25em;
+  }
+}

@@ -1,0 +1,11 @@
+@import 'variables';
+
+@mixin btnsColors($color) {
+  background-color: $color;
+  color: $colorwhite;
+}
+
+@mixin fontColor($color, $fontSize) {
+  color: $color;
+  font-size: $fontSize;
+}
