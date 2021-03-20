@@ -10,5 +10,10 @@
 !.vscode/extensions.json
 *.code-workspace
 
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
 # Local History for Visual Studio Code
 .history/
